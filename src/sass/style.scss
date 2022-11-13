@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -18,10 +17,13 @@ body {
   list-style: none;
   overflow: hidden;
   position: fixed;
+
   /* Set the navbar to fixed position */
   top: 0;
+
   /* Position the navbar at the top of the page */
   width: 100%;
+
   /* Full width */
   z-index: 1;
 }
@@ -48,6 +50,7 @@ body {
   width: 100%;
   position: absolute;
   top: 48px;
+
   /* z-index: 2;  для 2 способу */
   /* position: relative; */
   /* transform: translateY(-84px); -84 бо висота navbar 84рх */
@@ -84,16 +87,25 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
-}
-.subheader_phone:hover {
-  color: #ffffff;
-  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    cursor: pointer;
+  }
 }
 
 .subheader_btn {
   margin-top: 20px;
   border: none;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#1eacc7),
+    to(#4ce2ff)
+  );
   background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+  -webkit-box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
   box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   padding: 16px 20px;
@@ -109,7 +121,7 @@ body {
   /* другий спосіб щоб зробити прозорий navbar */
   /* z-index: 1; */
   min-height: 550px;
-  background: url("../img/uber_bg.png") center center/cover no-repeat;
+  background: url("../img/uber_bg.png") center (center / cover) no-repeat;
   padding: 67px 0 86px 0;
 }
 
@@ -152,7 +164,15 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   border: none;
+  background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#1eacc7),
+    to(#4ce2ff)
+  );
   background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+  -webkit-box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
   box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
@@ -187,15 +207,27 @@ body {
 }
 
 .reasons_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 16px;
 }
 
 .reasons_round {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-right: 25px;
   width: 113px;
@@ -221,7 +253,6 @@ body {
   line-height: 21px;
   color: #202020;
 }
-
 .subtitle {
   text-align: center;
   font-weight: 300;
@@ -232,32 +263,31 @@ body {
 .card {
   min-width: 400px;
   min-height: 260px;
+  &-1 {
+    background: url("../img/card/card-1.png") center center/cover no-repeat;
+  }
+  &-2 {
+    background: url("../img/card/card-2.png") center center/cover no-repeat;
+  }
+  &-3 {
+    background: url("../img/card/card-3.png") center center/cover no-repeat;
+  }
+  &-4 {
+    background: url("../img/card/card-4.png") center center/cover no-repeat;
+  }
+  &-5 {
+    background: url("../img/card/card-5.png") center center/cover no-repeat;
+  }
+  &-6 {
+    background: url("../img/card/card-6.png") center center/cover no-repeat;
+  }
 }
-.card-1 {
-  background: url("../img/card/card-1.png") center center/cover no-repeat;
-}
-.card-2 {
-  background: url("../img/card/card-2.png") center center/cover no-repeat;
-}
-.card-3 {
-  background: url("../img/card/card-3.png") center center/cover no-repeat;
-}
-.card-4 {
-  background: url("../img/card/card-4.png") center center/cover no-repeat;
-}
-.card-5 {
-  background: url("../img/card/card-5.png") center center/cover no-repeat;
-}
-.card-6 {
-  background: url("../img/card/card-6.png") center center/cover no-repeat;
-}
-
 .mobile {
   min-height: 864px;
   padding: 46px 0 77px 0;
-  background: rgb(162, 162, 162) url("../img/mobile_bg.jpg") center center/cover no-repeat;
+  background: rgb(162, 162, 162) url("../img/mobile_bg.jpg") center center/cover
+    no-repeat;
 }
-
 .mobile_box {
   margin-top: 30px;
   display: flex;
@@ -265,7 +295,6 @@ body {
   align-items: center;
   position: relative;
 }
-
 .mobile_text {
   font-weight: 400;
   font-size: 24px;
@@ -273,41 +302,42 @@ body {
   color: #ffffff;
   text-align: center;
 }
-
 .mobile_btn {
   position: absolute;
   top: 80%;
   bottom: 35px;
   width: 23px;
   height: 23px;
-  background: linear-gradient(#1eacc7, #1eacc7), linear-gradient(#1eacc7, #1eacc7), #000;
+  background: linear-gradient(#1eacc7, #1eacc7),
+    linear-gradient(#1eacc7, #1eacc7), #000;
   background-position: center;
   background-size: 50% 2px, 2px 50%;
   background-repeat: no-repeat;
   border-radius: 100%;
+  // 2 варіант
+  // bottom: 35px;
+  // left: 50%;
+  // transform: translateX(-50%);
+  &:hover {
+    cursor: pointer;
+  }
 }
-.mobile_btn:hover {
-  cursor: pointer;
-}
-
 .choice {
   padding: 56px 0px 138px 0;
   background-color: grey;
-}
 
+  // background: #070716 url('../img/car.png') center center/cover no-repeat;
+}
 .white-text {
   color: #fff;
 }
-
 .label-2 {
   background: #ffffff;
   color: #070716;
 }
-
 .choice {
   background: url("../img/bg-car.png") center center/cover no-repeat;
 }
-
 .choice-car {
   display: block;
   margin: 0 auto;
@@ -316,11 +346,10 @@ body {
   height: 480px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-
 .choice_text {
   text-align: center;
   color: #222222;
   font-weight: 100;
   font-size: 17px;
   line-height: 24px;
-}/*# sourceMappingURL=style.css.map */
+}
