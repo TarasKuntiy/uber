@@ -17,13 +17,10 @@ body {
   list-style: none;
   overflow: hidden;
   position: fixed;
-
   /* Set the navbar to fixed position */
   top: 0;
-
   /* Position the navbar at the top of the page */
   width: 100%;
-
   /* Full width */
   z-index: 1;
 }
@@ -87,7 +84,6 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
-
   &:hover {
     color: #ffffff;
     cursor: pointer;
@@ -188,7 +184,7 @@ body {
   height: 24px;
   font-weight: 400;
   font-size: 11px;
-  line-height: 22px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -352,4 +348,174 @@ body {
   font-weight: 100;
   font-size: 17px;
   line-height: 24px;
+}
+.required {
+  padding: 68px 0 87px 0;
+  &_block {
+    margin: 33px 0;
+    &_nmb {
+      margin-bottom: 0px;
+    }
+  }
+  &_title {
+    font-weight: 400;
+    font-size: 22px;
+    color: #1ca8c3;
+  }
+  &_list {
+    list-style-type: none;
+    padding-left: 50px;
+    margin-top: 22px;
+    li {
+      font-weight: 300;
+      font-size: 17px;
+      color: #222222;
+      line-height: 24px;
+      margin-top: 10px;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -32px;
+        top: 2px;
+        width: 21px;
+        height: 20px;
+        background: url("../img/icon-blue.svg") center center/cover no-repeat;
+      }
+    }
+  }
+  &_descr {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 24px;
+    color: #1ca8c3;
+    margin-top: 25px;
+  }
+}
+.warning {
+  .required_title {
+    color: #ff5656;
+  }
+  .required_list {
+    li {
+      &::before {
+        background: url("../img/icon-red.svg") center center/cover no-repeat;
+      }
+    }
+  }
+}
+.city {
+  min-height: 716px;
+  padding: 49px 0;
+  background: #080816 url("../img/world-bg.jpg") center center/cover no-repeat;
+  position: relative;
+  &_descr {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translateX(-50%);
+    font-weight: 400;
+    text-align: center;
+    font-size: 15px;
+    line-height: 68px;
+    color: #1fbad6;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer {
+  padding: 14px 23px 39px 23px;
+  &_line {
+    width: 299px;
+    height: 4px;
+    background-color: #1fbad6;
+    margin: 0 auto;
+  }
+  &_wrapper > div {
+    width: 33.33%;
+  }
+  &_wrapper {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &_socials {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_item {
+      background-color: #000;
+      border-radius: 100%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      margin: 0 4px;
+      justify-content: center;
+      align-items: center;
+      &_item img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  &_links {
+    width: 390px;
+    margin: 0 auto;
+    &_main {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      a {
+        color: #070716;
+        font-size: 15px;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+    }
+    &_submain {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      a {
+        font-weight: 300;
+        color: #999;
+        font-size: 11px;
+        text-transform: uppercase;
+        text-decoration: none;
+        line-height: 22px;
+      }
+    }
+    &_language {
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      font-weight: 400;
+      font-size: 11px;
+      text-transform: uppercase;
+      color: #1fbad6;
+      margin-top: 19px;
+    }
+  }
+  &_mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a {
+      margin-right: 30px;
+      img {
+        display: block;
+        max-width: 100%;
+        height: 32px;
+      }
+    }
+  }
 }
